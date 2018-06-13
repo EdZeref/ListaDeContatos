@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-navbar color="danger">
+		<ion-title>Salvar Novo Contato</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Nome</ion-label>
+			<ion-input type="text" [(ngModel)]="datos.nome"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Tipo numero</ion-label>
+			<ion-select [(ngModel)]="datos.tipoNumero">
+				<ion-option value="Celular">Celular</ion-option>
+				<ion-option value="Empresa">Empresa</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Numero</ion-label>
+			<ion-input type="number" [(ngModel)]="datos.numero"></ion-input>
+		</ion-item>
+	</ion-list>
+	<div padding>
+		<button ion-button color="primary" block (click)="Contato(datos);">Salvar contato</button>
+	</div>
+</ion-content>
